@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display_studentdetails</title>
+    <link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet"
+/>
+</head>
+<body>
+    <center>
+        <h1>display_student_details</h1>
+       <div class="container">
+        <table class="table table-stripe table-border table-center">
+            <tr class="table-secondary">
+                <th>rollno</th>
+                <th>Address</th>
+                <th>Contact Number</th>
+                <th>Teacher Name</th>
+            </tr>
+            {% for i in details %}
+                <tr class="table-info">
+                    <td>{{i.rollno}}</td>
+                    <td>{{i.address}}</td>
+                    <td>{{i.contactnumber}}</td>
+                    <td>{{i.teachername}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+       </div>
+    </center>
+    <script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+></script>
+</body>
+</html>

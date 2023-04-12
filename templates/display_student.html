@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student</title>
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+rel="stylesheet"
+/>
+    
+    
+</head>
+<body>
+    <center>
+        <h1>display student Table</h1>
+
+        <div >
+            <table class="table table-dark ">
+            
+                <tr >
+                    <th>Slno</th>
+                    <th>Rollno</th>
+                    <th>Sname</th>
+                </tr>
+            
+            
+                {% for so in std %}
+                    <tr >
+                        <td >{{so.slno}}</td>
+                        <td>{{so.rollno}}</td>
+                        <td>{{so.sname}}</td>
+                    </tr>
+                {% endfor %}
+            
+        </table>
+
+        </div>
+
+    </center>
+   <script src="{% static 'js/mdb.min.js' %}"></script> 
+   <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+></script>
+   
+   </body>
+</html>

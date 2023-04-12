@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display_teacher</title>
+</head>
+<body>
+    <center>
+        <h1>display_teacher</h1>
+        <table>
+            <tr>
+                <th>teache Id</th>
+                <th>Teacher Name</th>
+                <th>Subject</th>
+            </tr>
+            {% for t in teacher %}
+                <tr>
+                    <td>{{t.teacherid}}</td>
+                    <td>{{t.teachername}}</td>
+                    <td>{{t.subject}}</td>
+                    
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
